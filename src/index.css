@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.snap-mandatory {
+  border-radius: 0 !important;
+}
+
+.card.active {
+  flex-grow: 10;
+  max-width: 100%;
+}
+.card.active .background {
+  transform: scale(1.25, 1.25);
+}
+.card.active .label {
+  transform: translateX(0.5rem);
+}
+.card.active .label .content > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card.active .shadow {
+  opacity: 0.75;
+  transform: translateY(0);
+}
